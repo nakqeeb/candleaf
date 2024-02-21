@@ -1,0 +1,89 @@
+.checkout-product {
+  display: flex;
+  justify-content: flex-start;
+  gap: 61px;
+  margin-top: 61px;
+  margin-bottom: 61px;
+}
+.checkout-product .image {
+  position: relative;
+}
+.checkout-product .image .img-badge {
+  background-color: var(--green-color);
+  color: var(--white-color);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+.checkout-product .image img {
+  background-color: var(--white-color-alt);
+  width: 160px;
+  height: 130px;
+}
+.checkout-product .prodName {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.checkout-product .prodPrice {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--green-color);
+}
+
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid rgb(86 178 128 / 20%);
+  border-bottom: 1px solid rgb(86 178 128 / 20%);
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+
+.discount .coupon-input {
+  flex-basis: 70%;
+}
+.discount .addcode-btn {
+  flex-basis: 30%;
+}
+.cost-info {
+  font-size: 14px;
+  font-weight: 500;
+  color: #616161;
+  border-bottom: 1px solid rgb(86 178 128 / 20%);
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+.cost-info .subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cost-info .shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 29px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #616161;
+}
+
+.total p:last-child {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black-color);
+}

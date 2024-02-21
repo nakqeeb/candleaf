@@ -1,0 +1,86 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 113.19px);
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+.checkout-form .custom-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Details page */
+.checkout-form .contact {
+  margin-bottom: 50px;
+}
+.shipping-address .customer-name {
+  display: flex;
+  gap: 15px;
+}
+.shipping-address .city-info {
+  display: flex;
+  gap: 15px;
+}
+.shipping-address .check-box {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black-color);
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  margin-bottom: 50px;
+}
+.shipping-address .check-box > input[type="checkbox"] {
+  width: 1.15em;
+  height: 1.15em;
+  margin: 0;
+}
+
+/* Shipping page */
+.shipping {
+}
+.shipping .content,
+.payment .content {
+  border: 1.5px solid rgb(86 178 128 / 20%);
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.shipping .content .content-info,
+.payment .content .content-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.shipping .content .content-info.first-content,
+.payment .content .content-info.first-content {
+  border-bottom: 1.5px solid rgb(86 178 128 / 20%);
+  padding-bottom: 10px;
+}
+.shipping .content .content-info.last-content,
+.payment .content .content-info.last-content {
+  padding-top: 10px;
+}
+.shipping .content .content-info span,
+.payment .content .content-info span {
+  margin-right: 10px;
+  color: #818181;
+}
+.shipping .content .content-info p,
+.payment .content .content-info p {
+  color: var(--black-color);
+}
+.shipping .content .content-info .edit-btn,
+.payment .content .content-info .edit-btn {
+  font-size: 14px;
+}
+.shipping .content .content-info .radio-btn {
+  color: var(--black-color);
+  display: grid;
+  grid-template-columns: 3em auto;
+  gap: 0.5em;
+}

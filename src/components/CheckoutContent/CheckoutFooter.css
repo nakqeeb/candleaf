@@ -1,0 +1,8 @@
+.checkout-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout-footer .checkout-btn {
+    padding: 10px 40px;
+}

@@ -1,0 +1,44 @@
+.box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  width: 255px;
+  height: 270px;
+  position: relative;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  transition: var(--main-transition);
+}
+.box:hover::before {
+  background-color: rgb(86 178 128 / 10%);
+  width: 100%;
+  height: 100%;
+}
+.box img {
+  background-color: var(--white-color-alt);
+  width: 100%;
+}
+.box .info {
+  background-color: var(--white-color);
+}
+.box .info .prod-name {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.box .info .prod-price {
+  text-align: end;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--green-color);
+}
+
+.link {
+  color: var(--black-color);
+}

@@ -1,0 +1,10 @@
+.custom-link {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--green-color);
+  text-decoration: underline;
+  transition: var(--main-transition);
+}
+.custom-link:hover {
+  color: var(--green-color-alt);
+}

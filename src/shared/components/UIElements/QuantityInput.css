@@ -1,0 +1,40 @@
+
+.qty-form {
+  position: relative;
+}
+.qty-form .input-qty {
+  width: 58px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid var(--green-color-alt);
+  caret-color: var(--green-color);
+  border-radius: 3px;
+}
+.qty-form .input-qty:focus {
+  outline: none;
+  border-color: var(--green-color);
+  border-width: 2px;
+}
+.qty-form .plus-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  /* left: 5px; */
+  bottom: 3px;
+  color: var(--green-color-alt);
+  font-weight: bold;
+  margin: auto 5px;
+}
+.qty-form .minus-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  /* right: 5px; */
+  transform: translateX(-20px);
+  bottom: 3px;
+  color: var(--green-color-alt);
+  font-weight: bold;
+  margin: auto 5px;
+}

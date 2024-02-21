@@ -1,0 +1,32 @@
+.landing {
+  background-image: url("../../assets/images/landing.jpg");
+  background-size: cover;
+  background-position: right;
+  height: 780px;
+  width: 100%;
+  position: relative;
+  margin-top: var(--header-height); /* Header Height */
+}
+.landing .card {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: rgb(255 255 255 / 70%);
+  padding: 50px 30px;
+}
+.landing .card span {
+  font-size: 40px;
+  font-weight: normal;
+}
+.landing .card h2 {
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+.landing .card p {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 50px;
+}

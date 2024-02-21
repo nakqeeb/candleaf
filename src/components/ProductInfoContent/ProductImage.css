@@ -1,0 +1,18 @@
+.product-image {
+  width: 540px;
+  height: 433px;
+  text-align: center;
+}
+.product-image img {
+  background-color: var(--white-color-alt);
+  width: 100%;
+}
+.product-image > p {
+  font-size: 22px;
+  font-weight: 500;
+}
+.product-image p:last-child {
+  color: var(--green-color);
+  font-size: 20px;
+  font-weight: 700;
+}

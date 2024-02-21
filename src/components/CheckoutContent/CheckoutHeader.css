@@ -1,0 +1,25 @@
+.checkout-header .logo {
+  display: flex;
+  align-items: center;
+}
+.checkout-header .logo img {
+  margin-right: 15px;
+}
+.checkout-header .logo h2 {
+  color: var(--green-color);
+  font-weight: normal;
+  font-size: 22px;
+}
+.checkout-header .logo img {
+  width: 32px;
+}
+.checkout-header .navlinks {
+  display: flex;
+  align-items: center;
+}
+.checkout-header .navlinks p:not(:first-child) {
+  margin-left: 15px;
+}
+.checkout-header .navlinks p:not(:last-child) {
+  margin-right: 15px;
+}

@@ -1,0 +1,9 @@
+.product-content {
+    margin-top: var(--header-height); /* Header Height */
+    padding-top: var(--main-padding-top);
+    padding-bottom: 200px
+}
+.product-content .container {
+    display: flex;
+    gap: 20px;
+}

@@ -1,0 +1,18 @@
+.input-field {
+  height: 40px;
+  padding: 15px 20px;
+  border: 1px solid var(--green-color-alt);
+  border-radius: 5px;
+  caret-color: var(--green-color);
+  color: var(--green-color);
+}
+.input-field:focus {
+  outline: none;
+  border: 2px solid var(--green-color);
+}
+.input-field::placeholder {
+  transition: opacity var(--main-transition);
+}
+.input-field:focus::placeholder {
+  opacity: 0;
+}

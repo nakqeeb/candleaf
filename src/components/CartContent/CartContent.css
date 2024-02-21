@@ -1,0 +1,12 @@
+.cart {
+    margin-top: var(--header-height); /* Header Height */
+    padding-top: var(--main-padding-top);
+    padding-bottom: 200px
+}
+.cart .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
