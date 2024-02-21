@@ -3,6 +3,13 @@ import CustomInput from "../../shared/components/UIElements/CustomInput";
 import CheckoutFooter from "./CheckoutFooter";
 import "./CheckoutForm.css";
 import CustomLink from "../../shared/components/UIElements/CustomLink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleInfo,
+  faCreditCard,
+  faLock,
+} from "@fortawesome/free-solid-svg-icons";
+import CheckoutConfirmed from "./CheckoutConfirmed";
 
 interface FormData {
   email: string;
@@ -18,19 +25,22 @@ interface FormData {
 }
 const CheckoutForm: FC<{
   step: number;
+  paymentConfiremd: boolean;
   onChangeStep?: any | undefined;
   onSubmit?: any | undefined;
-}> = ({ step, onChangeStep, onSubmit }) => {
+}> = ({ step, paymentConfiremd, onChangeStep, onSubmit }) => {
   const [email, setEmail] = useState<string>();
+  const [confirmed, setConfirmed] = useState<boolean>();
   const [inputValues, setInputValues] = useState<FormData>();
   const [currentStep, setCurrentStep] = useState<number>();
   const emailRef = useRef();
   useEffect(() => {
     setCurrentStep(step);
+    setConfirmed(paymentConfiremd);
     console.log(inputValues);
-  }, [inputValues, step]);
+  }, [inputValues, paymentConfiremd, step]);
   return (
-    <form
+    confirmed === false ? <form
       className="checkout-form"
       onSubmit={(e) => {
         e.preventDefault();
@@ -271,6 +281,129 @@ const CheckoutForm: FC<{
                 <CustomLink className={"edit-btn"} name="Edit" />
               </div>
             </div>
+            <div className="payment-method">
+              <h2>Payment method</h2>
+              <div className="credit-card">
+                <div className="credit-card-head">
+                  <FontAwesomeIcon className="card-icon" icon={faCreditCard} />
+                  <p>Credit Card</p>
+                </div>
+                <div className="credit-card-form">
+                  <div className="card-number">
+                    <CustomInput
+                      className="custom-input"
+                      value={inputValues?.fname}
+                      name="card_number"
+                      placeholder="Card Number"
+                      onChange={(e: any) => {
+                        // setCurrentStep((prev) => prev! + 1);
+                        //setEmail(e.target.value);
+                        setInputValues({
+                          ...inputValues!,
+                          [e.target.name]: e.target.value,
+                        });
+                      }}
+                    />
+                    <FontAwesomeIcon className="lock-icon" icon={faLock} />
+                  </div>
+                  <CustomInput
+                    className="custom-input"
+                    value={inputValues?.fname}
+                    name="holder_name"
+                    placeholder="Holder Name"
+                    onChange={(e: any) => {
+                      // setCurrentStep((prev) => prev! + 1);
+                      //setEmail(e.target.value);
+                      setInputValues({
+                        ...inputValues!,
+                        [e.target.name]: e.target.value,
+                      });
+                    }}
+                  />
+                  <div className="date-cvv">
+                    <CustomInput
+                      className="custom-input"
+                      value={inputValues?.fname}
+                      name="expiry_date"
+                      placeholder="Expiration (MM/YY)"
+                      onChange={(e: any) => {
+                        // setCurrentStep((prev) => prev! + 1);
+                        //setEmail(e.target.value);
+                        setInputValues({
+                          ...inputValues!,
+                          [e.target.name]: e.target.value,
+                        });
+                      }}
+                    />
+                    <CustomInput
+                      className="custom-input"
+                      value={inputValues?.lname}
+                      name="cvv"
+                      placeholder="CVV"
+                      onChange={(e: any) => {
+                        // setCurrentStep((prev) => prev! + 1);
+                        //setEmail(e.target.value);
+                        setInputValues({
+                          ...inputValues!,
+                          [e.target.name]: e.target.value,
+                        });
+                      }}
+                    />
+                    <FontAwesomeIcon
+                      className="circleinfo-icon"
+                      icon={faCircleInfo}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="tax-info">
+              <h2>Tax Information</h2>
+              <CustomInput
+                className="custom-input"
+                value={inputValues?.fname}
+                name="vat_number"
+                placeholder="VAT number (optional)"
+                onChange={(e: any) => {
+                  // setCurrentStep((prev) => prev! + 1);
+                  //setEmail(e.target.value);
+                  setInputValues({
+                    ...inputValues!,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+              />
+              <CustomInput
+                className="custom-input"
+                value={inputValues?.fname}
+                name="vat_number"
+                placeholder="PEC (optional)"
+                onChange={(e: any) => {
+                  // setCurrentStep((prev) => prev! + 1);
+                  //setEmail(e.target.value);
+                  setInputValues({
+                    ...inputValues!,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+              />
+            </div>
+            <div className="billing-address">
+              <h2>Billing address</h2>
+              <div className="content">
+                <div className="content-info first-content">
+                  <label className="radio-btn">
+                    <input type="radio" name="" id="" /> Same as the shipping
+                    address
+                  </label>
+                </div>
+                <div className="content-info last-content">
+                  <label className="radio-btn">
+                    <input type="radio" name="" id="" /> Use a different address for billing
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -282,7 +415,7 @@ const CheckoutForm: FC<{
         }}
         step={currentStep!}
       />
-    </form>
+    </form> : <CheckoutConfirmed />
   );
 };
 
