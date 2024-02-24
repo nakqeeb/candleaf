@@ -5,10 +5,11 @@
 }
 .testimonials .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   gap: 30px;
-  /* display: flex;
-    justify-content: space-evenly; */
+  display: flex;
+  justify-content: space-evenly;
+  overflow: scroll;
 }
 .testimonials .card {
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
@@ -21,6 +22,10 @@
   align-items: center;
   text-align: center;
   padding: 15px;
+}
+@media (max-width: 767px) {
+  .testimonials .card {
+  }
 }
 .testimonials .card img {
   max-width: 84px;

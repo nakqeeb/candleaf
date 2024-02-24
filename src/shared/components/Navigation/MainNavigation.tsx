@@ -2,7 +2,6 @@ import "./MainNavigation.css";
 import logo from "../../../assets/images/logo.svg";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faShoppingCart,
   faChevronDown,
@@ -14,6 +13,7 @@ const MainNavigation = () => {
   return (
     <div className="header" id="header">
       <div className="container">
+        <FontAwesomeIcon className="toggle-menu" icon={faBars} />
         <div className="logo">
           <NavLink to="/">
             <img src={logo} alt="" />
@@ -35,15 +35,12 @@ const MainNavigation = () => {
             </li>
           </ul>
         </div>
-        <FontAwesomeIcon className="toggle-menu" icon={faBars} />
         <div className="icons">
           <FontAwesomeIcon
-            style={{ color: "var(--green-color)" }}
             icon={faUser}
           />
           <NavLink className="link" to={`cart`}>
             <FontAwesomeIcon
-              style={{ color: "var(--green-color)" }}
               icon={faShoppingCart}
             />
           </NavLink>

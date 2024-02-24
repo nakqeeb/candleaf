@@ -3,6 +3,7 @@ import "./Products.css";
 import ProductCard from "./ProductCard";
 import { useState } from "react";
 import { ProductData, Product } from "../../shared/ProductData";
+import CustomButton from "../../shared/components/UIElements/CustomButton";
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>(ProductData);
@@ -22,6 +23,7 @@ const Products = () => {
             prodPrice={product.prodPrice}
           />
         ))}
+        <CustomButton className="see-more-btn" name="See more" />
         {/* <ProductCard className='prod-card' image={candle_1} prodName="Spiced Mint" prodPrice="9.99$" />
             <ProductCard className='prod-card' image={candle_2} prodName="Sweet Straweberry" prodPrice="9.99$" />
             <ProductCard className='prod-card' image={candle_3} prodName="Cool Blueberries" prodPrice="9.99$" />

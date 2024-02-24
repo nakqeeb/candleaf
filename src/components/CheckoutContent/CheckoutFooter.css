@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 60px;
 }
 .checkout-footer .checkout-btn {
     padding: 10px 40px;

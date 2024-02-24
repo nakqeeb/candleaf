@@ -57,6 +57,12 @@
 .feature .container .info ul li:not(:last-child) {
   margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+  .feature .container .info ul {
+    text-align: left;
+    line-height: 1.5;
+  }
+}
 .feature .container .image {
 }
 .feature .container .image img {

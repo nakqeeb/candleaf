@@ -14,6 +14,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 .header .container .logo {
   display: flex;
@@ -25,10 +31,8 @@
 @media (max-width: 767px) {
   .header .container .toggle-menu {
     display: block;
-  }
-  .header .logo {
-    width: 100%;
-    height: 59px;
+    width: 25px;
+    height: 25px;
   }
 }
 .header .container .logo a {
@@ -40,10 +44,13 @@
   font-size: 22px;
 }
 .header .container .logo img {
-  width: 32px;
+  width: 33.61px;
+  height: 33.61px;
 }
 .header .container .navlinks ul {
   display: flex;
+  font-size: 16px;
+  font-weight: 500;
 }
 .header .container .navlinks ul li {
   margin-right: 30px;
@@ -51,6 +58,21 @@
 .header .container .navlinks a {
   color: var(--black-color);
 }
+@media (max-width: 767px) {
+  .header .container .navlinks {
+    display: none;
+  }
+}
 .header .container .icons svg {
   margin-right: 15px;
+  width: 23px;
+  height: 23px;
+}
+@media (max-width: 767px) {
+  .header .container .icons {
+    display: flex;
+  }
+  .header .container .icons svg:last-child {
+    margin-right: 0;
+  }
 }

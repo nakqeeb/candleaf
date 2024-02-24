@@ -15,7 +15,19 @@
     margin-bottom: -10px; */
   animation: push-up 1s ease-out forwards;
 }
-
+.products .container .see-more-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  .products .container .see-more-btn {
+    display: block;
+    font-size: 20.65px;
+    font-weight: 500;
+    width: 176px;
+    height: 40px;
+    margin: 30px auto 0; /*top left-right bottom*/
+  }
+}
 @keyframes push-up {
   0% {
     transform: translateY(0deg);

@@ -3,6 +3,7 @@
   width: 255px;
   height: 270px;
   position: relative;
+  margin: auto;
 }
 .box::before {
   content: "";
@@ -18,6 +19,13 @@
   background-color: rgb(86 178 128 / 10%);
   width: 100%;
   height: 100%;
+}
+@media (max-width: 767px) {
+  .box {
+    width: 346px;
+    height: 185px;
+    overflow: hidden;
+  }
 }
 .box img {
   background-color: var(--white-color-alt);
@@ -41,4 +49,25 @@
 
 .link {
   color: var(--black-color);
+}
+
+@media (max-width: 767px) {
+  .box img {
+    width: 346px;
+    height: 237px;
+  }
+  .box .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 48.55px;
+  }
+  .box .info .prod-name {
+    margin: 0;
+    margin-top: 5px;
+  }
+  .box .info .prod-price {
+    font-size: 17px;
+    margin: 0;
+  }
 }
