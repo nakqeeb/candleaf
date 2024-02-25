@@ -12,10 +12,15 @@ const ProductContent: FC<Product> = ({ id, prodImg, prodName, prodPrice }) => {
         {width <= 767 && <h2>{prodName}</h2>}
         <ProductImage prodImg={prodImg} />
         <ProductDescription prodName={prodName} prodPrice={prodPrice} />
-        {width <= 767 && <><p>
-        All hand-made with natural soy wax, Candleaf is made for your pleasure
-        moments.
-      </p><p>🚚 FREE SHIPPING</p></>}
+        {width <= 767 && (
+          <>
+            <p>
+              All hand-made with natural soy wax, Candleaf is made for your
+              pleasure moments.
+            </p>
+            <p>🚚 FREE SHIPPING</p>
+          </>
+        )}
       </div>
     </div>
   );

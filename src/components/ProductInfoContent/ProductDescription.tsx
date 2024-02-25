@@ -27,48 +27,52 @@ const ProductDescription: FC<{ prodName: string; prodPrice: string }> = ({
         <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
       </CustomButton>
       <div className="description">
-        {width > 767 && <ul>
-          <li>
-            <span>Wax:</span> Top grade Soy wax that delivers a smoke less,
-            consistent burn
-          </li>
-          <li>
-            <span>Fragrance:</span> Premium quality ingredients with natural
-            essential oils
-          </li>
-          <li>
-            <ul>
-              <li>
-                <span>Burning Time:</span> 70-75 hours
-              </li>
-              <li>
-                <span>Dimension:</span> 10cm x 5cm
-              </li>
-              <li>
-                <span>Weight:</span> 400g
-              </li>
-            </ul>
-          </li>
-        </ul>}
-        {width <= 767 && <ul>
-          <li>
-            <span>Wax:</span> Top grade Soy wax that delivers a smoke less,
-            consistent burn
-          </li>
-          <li>
-            <span>Fragrance:</span> Premium quality ingredients with natural
-            essential oils
-          </li>
-              <li>
-                <span>Burning Time:</span> 70-75 hours
-              </li>
-              <li>
-                <span>Dimension:</span> 10cm x 5cm
-              </li>
-              <li>
-                <span>Weight:</span> 400g
-              </li>
-        </ul>}
+        {width > 767 && (
+          <ul>
+            <li>
+              <span>Wax:</span> Top grade Soy wax that delivers a smoke less,
+              consistent burn
+            </li>
+            <li>
+              <span>Fragrance:</span> Premium quality ingredients with natural
+              essential oils
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <span>Burning Time:</span> 70-75 hours
+                </li>
+                <li>
+                  <span>Dimension:</span> 10cm x 5cm
+                </li>
+                <li>
+                  <span>Weight:</span> 400g
+                </li>
+              </ul>
+            </li>
+          </ul>
+        )}
+        {width <= 767 && (
+          <ul>
+            <li>
+              <span>Wax:</span> Top grade Soy wax that delivers a smoke less,
+              consistent burn
+            </li>
+            <li>
+              <span>Fragrance:</span> Premium quality ingredients with natural
+              essential oils
+            </li>
+            <li>
+              <span>Burning Time:</span> 70-75 hours
+            </li>
+            <li>
+              <span>Dimension:</span> 10cm x 5cm
+            </li>
+            <li>
+              <span>Weight:</span> 400g
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );

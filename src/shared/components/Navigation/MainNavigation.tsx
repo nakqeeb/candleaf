@@ -36,13 +36,9 @@ const MainNavigation = () => {
           </ul>
         </div>
         <div className="icons">
-          <FontAwesomeIcon
-            icon={faUser}
-          />
+          <FontAwesomeIcon icon={faUser} />
           <NavLink className="link" to={`cart`}>
-            <FontAwesomeIcon
-              icon={faShoppingCart}
-            />
+            <FontAwesomeIcon icon={faShoppingCart} />
           </NavLink>
         </div>
       </div>

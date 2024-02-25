@@ -76,7 +76,9 @@ const Footer = () => {
       </div>
       <div className="rights">
         <p className="right">©Candleaf All Rights Reserved.</p>
-        <p className="designed">Designed with ❤️ by <span>Nakqeeb</span></p>
+        <p className="designed">
+          Designed with ❤️ by <span>Nakqeeb</span>
+        </p>
       </div>
     </>
   );
