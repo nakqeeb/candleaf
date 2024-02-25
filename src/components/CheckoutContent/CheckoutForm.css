@@ -22,9 +22,21 @@
   display: flex;
   gap: 15px;
 }
+@media (max-width: 767px) {
+  .shipping-address .customer-name {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .shipping-address .city-info {
   display: flex;
   gap: 15px;
+}
+@media (max-width: 767px) {
+  .shipping-address .city-info {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 .shipping-address .check-box {
   font-size: 14px;
@@ -86,7 +98,7 @@
 .payment .content .content-info .edit-btn {
   font-size: 14px;
 }
-.shipping .content .content-info .radio-btn, 
+.shipping .content .content-info .radio-btn,
 .billing-address .content .content-info .radio-btn {
   color: var(--black-color);
   display: grid;

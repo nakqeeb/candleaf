@@ -39,8 +39,8 @@ const CheckoutForm: FC<{
     setConfirmed(paymentConfiremd);
     console.log(inputValues);
   }, [inputValues, paymentConfiremd, step]);
-  return (
-    confirmed === false ? <form
+  return confirmed === false ? (
+    <form
       className="checkout-form"
       onSubmit={(e) => {
         e.preventDefault();
@@ -399,7 +399,8 @@ const CheckoutForm: FC<{
                 </div>
                 <div className="content-info last-content">
                   <label className="radio-btn">
-                    <input type="radio" name="" id="" /> Use a different address for billing
+                    <input type="radio" name="" id="" /> Use a different address
+                    for billing
                   </label>
                 </div>
               </div>
@@ -415,7 +416,9 @@ const CheckoutForm: FC<{
         }}
         step={currentStep!}
       />
-    </form> : <CheckoutConfirmed />
+    </form>
+  ) : (
+    <CheckoutConfirmed />
   );
 };
 
