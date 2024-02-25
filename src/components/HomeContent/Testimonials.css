@@ -9,7 +9,8 @@
   gap: 30px;
   display: flex;
   justify-content: space-evenly;
-  overflow: scroll;
+  align-items: center;
+  /* overflow: scroll; */
 }
 .testimonials .card {
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
@@ -24,7 +25,8 @@
   padding: 15px;
 }
 @media (max-width: 767px) {
-  .testimonials .card {
+  .testimonials .container {
+    flex-direction: column;
   }
 }
 .testimonials .card img {

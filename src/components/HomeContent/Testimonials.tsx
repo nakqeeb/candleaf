@@ -5,6 +5,8 @@ import avatar_2 from "../../assets/images/avatar-02.png";
 import avatar_3 from "../../assets/images/avatar-03.png";
 import Rating from "../../shared/components/UIElements/Rating";
 const Testimonials = () => {
+  // const showOnMobile = document.innerWidth < 769;
+  // const { height, width } = useWindowDimensions();
   return (
     <div className="testimonials">
       <MainHeading

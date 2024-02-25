@@ -4,14 +4,16 @@ import CustomButton from "../../shared/components/UIElements/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import QuantityInput from "../../shared/components/UIElements/QuantityInput";
+import useWindowDimensions from "../../shared/hooks/useWindowDimensions";
 
 const ProductDescription: FC<{ prodName: string; prodPrice: string }> = ({
   prodName,
   prodPrice,
 }) => {
+  const { height, width } = useWindowDimensions();
   return (
     <div className="product-description">
-      <h2>{prodName}</h2>
+      {width > 767 && <h2>{prodName}</h2>}
       <div className="price-qty">
         <div className="price">
           <p>{prodPrice}</p>
@@ -25,14 +27,14 @@ const ProductDescription: FC<{ prodName: string; prodPrice: string }> = ({
         <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
       </CustomButton>
       <div className="description">
-        <ul>
+        {width > 767 && <ul>
           <li>
             <span>Wax:</span> Top grade Soy wax that delivers a smoke less,
             consistent burn
           </li>
           <li>
             <span>Fragrance:</span> Premium quality ingredients with natural
-            essential oils{" "}
+            essential oils
           </li>
           <li>
             <ul>
@@ -40,14 +42,33 @@ const ProductDescription: FC<{ prodName: string; prodPrice: string }> = ({
                 <span>Burning Time:</span> 70-75 hours
               </li>
               <li>
-                <span>Dimension:</span> 10cm x 5cm{" "}
+                <span>Dimension:</span> 10cm x 5cm
               </li>
               <li>
                 <span>Weight:</span> 400g
               </li>
             </ul>
           </li>
-        </ul>
+        </ul>}
+        {width <= 767 && <ul>
+          <li>
+            <span>Wax:</span> Top grade Soy wax that delivers a smoke less,
+            consistent burn
+          </li>
+          <li>
+            <span>Fragrance:</span> Premium quality ingredients with natural
+            essential oils
+          </li>
+              <li>
+                <span>Burning Time:</span> 70-75 hours
+              </li>
+              <li>
+                <span>Dimension:</span> 10cm x 5cm
+              </li>
+              <li>
+                <span>Weight:</span> 400g
+              </li>
+        </ul>}
       </div>
     </div>
   );

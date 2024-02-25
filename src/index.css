@@ -13,7 +13,9 @@
   --main-transition: 0.5s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
-  --header-height: 62px;
+  --mobile-padding-top: 50px;
+  --mobile-padding-bottom: 50px;
+  --header-height: 75px;
 }
 html {
   scroll-behavior: smooth;
