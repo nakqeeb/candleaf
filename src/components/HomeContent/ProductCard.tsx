@@ -5,7 +5,7 @@ const ProductCard: FC<{
   prodId: string;
   image: string;
   prodName: string;
-  prodPrice: string;
+  prodPrice: number;
   className?: string;
 }> = ({ prodId, image, prodName, prodPrice, className }) => {
   return (

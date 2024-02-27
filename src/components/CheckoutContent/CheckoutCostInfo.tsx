@@ -3,35 +3,66 @@ import candle_1 from "../../assets/images/candle-1.png";
 import CustomButton from "../../shared/components/UIElements/CustomButton";
 import CustomInput from "../../shared/components/UIElements/CustomInput";
 import { FC } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../shared/store";
+import CartProduct from "../../shared/store/CartProduct";
+
+const getTotal = (cartItem: CartProduct[]) => {
+  let totalQuantity = 0;
+  let totalPrice = 0;
+  cartItem.forEach((item) => {
+    totalQuantity += item.quantity!;
+    totalPrice += item.prodPrice! * item.quantity!;
+  });
+  return { totalPrice, totalQuantity };
+};
 
 const CheckoutCostInfo: FC<{ step: number; paymentConfiremd: boolean }> = ({
   step,
   paymentConfiremd,
 }) => {
+  const cartItems = useSelector((state: RootState) => state.cart.cart);
+  const cartItem = useSelector((state: RootState) => state.cart.cart);
+  const quantity = getTotal(cartItem).totalQuantity;
+  const price = getTotal(cartItem).totalPrice;
   return (
     <>
-      <div className="checkout-product">
-        <div className="image">
-          <img src={candle_1} alt="" />
-          <div className="img-badge">
-            <p>1</p>
+      {cartItems.map((item) => (
+        <div className="checkout-product">
+          <div className="image">
+            <img src={item.prodImg} alt="" />
+            <div className="img-badge">
+              <p>{item.quantity}</p>
+            </div>
           </div>
+          <p className="prodName">{item.prodName}</p>
+          <p className="prodPrice">
+            {new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "USD",
+            }).format(item.prodPrice)}
+          </p>
         </div>
-        <p className="prodName">Spiced Mint Candleaf®</p>
-        <p className="prodPrice">$ 9.99</p>
-      </div>
-      {paymentConfiremd === false && <div className="discount">
-        <CustomInput className="coupon-input" placeholder="Coupon code" />
-        <CustomButton
-          className="addcode-btn"
-          name="Add code"
-          style={{ backgroundColor: "#A8A8A8", fontSize: "17.65px" }}
-        />
-      </div>}
+      ))}
+      {paymentConfiremd === false && (
+        <div className="discount">
+          <CustomInput className="coupon-input" placeholder="Coupon code" />
+          <CustomButton
+            className="addcode-btn"
+            name="Add code"
+            style={{ backgroundColor: "#A8A8A8", fontSize: "17.65px" }}
+          />
+        </div>
+      )}
       <div className="cost-info">
         <div className="subtotal">
           <p>Subtotal</p>
-          <p>$ 9.99</p>
+          <p>
+            {new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "USD",
+            }).format(price)}
+          </p>
         </div>
         <div className="shipping">
           <p>Shipping</p>
@@ -44,7 +75,12 @@ const CheckoutCostInfo: FC<{ step: number; paymentConfiremd: boolean }> = ({
       </div>
       <div className="total">
         <p>Total</p>
-        <p>$ 9.99</p>
+        <p>
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(price)}
+        </p>
       </div>
     </>
   );

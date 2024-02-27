@@ -8,8 +8,11 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 const MainNavigation = () => {
+  const cartItems = useSelector((state: RootState) => state.cart.cart);
   return (
     <div className="header" id="header">
       <div className="container">
@@ -39,6 +42,7 @@ const MainNavigation = () => {
           <FontAwesomeIcon icon={faUser} />
           <NavLink className="link" to={`cart`}>
             <FontAwesomeIcon icon={faShoppingCart} />
+            <div className="cart-badge">{cartItems.length}</div>
           </NavLink>
         </div>
       </div>

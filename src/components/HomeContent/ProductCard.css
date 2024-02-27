@@ -47,10 +47,6 @@
   color: var(--green-color);
 }
 
-.link {
-  color: var(--black-color);
-}
-
 @media (max-width: 767px) {
   .box img {
     width: 346px;

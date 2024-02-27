@@ -13,6 +13,7 @@
   padding-left: 5%;
   padding-right: 5%;
   background-color: #f2f2f2;
+  overflow: scroll;
 }
 @media (max-width: 767px) {
   .checkout {

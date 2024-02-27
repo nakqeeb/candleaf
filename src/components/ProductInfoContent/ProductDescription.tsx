@@ -1,29 +1,57 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import "./ProductDescription.css";
 import CustomButton from "../../shared/components/UIElements/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import QuantityInput from "../../shared/components/UIElements/QuantityInput";
 import useWindowDimensions from "../../shared/hooks/useWindowDimensions";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../shared/store/cart-slice";
+import { RootState } from "../../shared/store";
+import { ProductData } from "../../shared/ProductData";
+import { useParams } from "react-router-dom";
 
-const ProductDescription: FC<{ prodName: string; prodPrice: string }> = ({
-  prodName,
-  prodPrice,
-}) => {
+const ProductDescription = () => {
   const { height, width } = useWindowDimensions();
+  const [quantity, setQuantity] = useState<number>(0);
+  const productId = useParams().productId;
+  const cartItems = useSelector((state: RootState) => state.cart.cart);
+  const product = ProductData.find((prod) => prod.id === productId);
+  const dispatch = useDispatch();
+  const addToCartHandler = () => {
+    dispatch(
+      cartActions.addToCart({
+        id: productId,
+        prodName: product?.prodName,
+        prodPrice: product?.prodPrice,
+        prodImg: product?.prodImg,
+        quantity,
+      })
+    );
+  };
   return (
     <div className="product-description">
-      {width > 767 && <h2>{prodName}</h2>}
+      {width > 767 && <h2>{product!.prodName}</h2>}
       <div className="price-qty">
         <div className="price">
-          <p>{prodPrice}</p>
+          <p>{product!.prodPrice}</p>
         </div>
         <div className="qty">
           <p>Quantity</p>
-          <QuantityInput />
+          {/* <QuantityInput prodId={id} quantity={cartItems.find(cartItem => cartItem.id === id)?.quantity! ?? 0} onPlusQuantity={() => onIncreaseQuantity(id)} onMinusQuantity={() => onDecreaseQuantity(id)} /> */}
+          <QuantityInput
+            prodId={productId!}
+            quantity={quantity}
+            onPlusQuantity={() => setQuantity((prev) => prev + 1)}
+            onMinusQuantity={() => setQuantity((prev) => prev - 1)}
+          />
         </div>
       </div>
-      <CustomButton className="cart-btn" name="+ Add to cart">
+      <CustomButton
+        className="cart-btn"
+        name="+ Add to cart"
+        onClick={addToCartHandler}
+      >
         <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
       </CustomButton>
       <div className="description">

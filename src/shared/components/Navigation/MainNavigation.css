@@ -68,6 +68,22 @@
   width: 23px;
   height: 23px;
 }
+.header .container .icons .link {
+  position: relative;
+}
+.header .container .icons .link .cart-badge {
+  background-color: var(--green-color);
+  color: var(--white-color);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -15px;
+  right: 5px;
+}
 @media (max-width: 767px) {
   .header .container .icons {
     display: flex;
