@@ -29,7 +29,7 @@ const QuantityInput: FC<{
       <button className="plus-btn" onClick={plusQty}>
         +
       </button>
-      <input className="input-qty" type="text" value={quantity} />
+      <input className="input-qty" disabled type="text" value={quantity} />
       <button className="minus-btn" onClick={minusQty}>
         -
       </button>

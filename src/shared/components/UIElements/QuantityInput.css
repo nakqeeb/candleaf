@@ -20,7 +20,7 @@
   background-color: transparent;
   position: absolute;
   /* left: 5px; */
-  bottom: 3px;
+  bottom: 6px;
   color: var(--green-color-alt);
   font-weight: bold;
   margin: auto 5px;
@@ -32,7 +32,7 @@
   position: absolute;
   /* right: 5px; */
   transform: translateX(-20px);
-  bottom: 3px;
+  bottom: 6px;
   color: var(--green-color-alt);
   font-weight: bold;
   margin: auto 5px;

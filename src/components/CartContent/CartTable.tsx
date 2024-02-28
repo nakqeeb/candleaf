@@ -13,7 +13,7 @@ const CartTable = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cart);
   const dispatch = useDispatch();
   const removeItem = (id: string) => {
-    //dispatch(cartActions.removeItemFromCart(id));
+    dispatch(cartActions.removeItemFromCart(id));
   };
   const { height, width } = useWindowDimensions();
   const onIncreaseQuantity = (productId: string) => {
