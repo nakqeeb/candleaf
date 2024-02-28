@@ -49,3 +49,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## License
 
 [MIT License](LICENSE)
+
+
+## Source of Inspiration
+
+This project is inspired by [Figma](https://www.figma.com/file/nj5tAnFELd7niYWlKeIkd6/E-Commerce-UI-KIT-(Community)).
