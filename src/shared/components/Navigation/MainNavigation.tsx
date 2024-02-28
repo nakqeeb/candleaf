@@ -23,18 +23,20 @@ const MainNavigation = forwardRef(({ open, setOpen }: any, ref: any) => {
     // setToggle(!toggle);
     setOpen(!open);
   };
-  
+
   return (
     <div className="header" id="header">
       <div className="container">
-        <FontAwesomeIcon ref={ref} className="toggle-menu" onClick={toggleMenu} icon={open? faXmark : faBars} />
+        <div ref={ref}>
+          <FontAwesomeIcon className="toggle-menu" onClick={toggleMenu} icon={open ? faXmark : faBars} />
+        </div>
         <div className="logo">
           <NavLink to="/ecommerce-frontend">
             <img src={logo} alt="" />
           </NavLink>
           <h2>Candleaf</h2>
         </div>
-        <div ref={ref} className="navlinks" style={{opacity: width <= 767 ? open === true ? 1 : 0 : 1}}>
+        <div className="navlinks" style={{ opacity: width <= 767 ? open === true ? 1 : 0 : 1 }}>
           <ul>
             <li>
               <NavLink to="/products">
