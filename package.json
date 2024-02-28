@@ -52,5 +52,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "homepage": "https://nakqeeb.github.io/ecommerce-frontend"
 }
