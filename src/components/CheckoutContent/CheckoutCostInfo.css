@@ -1,6 +1,6 @@
 .checkout-product {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 61px;
   margin-top: 61px;
   margin-bottom: 61px;
@@ -37,6 +37,26 @@
   color: var(--green-color);
 }
 
+@media (max-width: 767px) {
+  .checkout-product .image .img-badge {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+  }
+  .checkout-product .image img {
+    width: 93.54px;
+    height: 76px;
+  }
+  .checkout-product .prodName {
+    font-weight: 500;
+  }
+  .checkout-product .prodPrice {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+}
+
 .discount {
   display: flex;
   justify-content: center;
@@ -52,6 +72,17 @@
 }
 .discount .addcode-btn {
   flex-basis: 30%;
+}
+@media (max-width: 767px) {
+  .discount {
+
+  }
+  .discount .coupon-input {
+    flex-basis: 60%;
+  }
+  .discount .addcode-btn {
+    flex-basis: 40%;
+  }
 }
 .cost-info {
   font-size: 14px;

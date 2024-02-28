@@ -9,7 +9,7 @@ const ProductCard: FC<{
   className?: string;
 }> = ({ prodId, image, prodName, prodPrice, className }) => {
   return (
-    <NavLink className="link" to={`product/${prodId}`}>
+    <NavLink className="link" to={`/product/${prodId}`}>
       <div className={`${className} box`}>
         <img src={image} alt="" />
         <div className="info">

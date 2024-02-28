@@ -7,6 +7,7 @@ const CustomButton = (props: any) => {
       className={`custom-button ${props.className}`}
       style={props.style}
       type={props.type}
+      disabled={props.disabled}
     >
       {props.children}
       {props.name}

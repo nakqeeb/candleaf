@@ -6,27 +6,38 @@ import {
   faShoppingCart,
   faChevronDown,
   faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
+import { forwardRef, useState } from "react";
+import withClickOutside from "../../utils/withClickOutside";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-const MainNavigation = () => {
+const MainNavigation = forwardRef(({ open, setOpen }: any, ref: any) => {
   const cartItems = useSelector((state: RootState) => state.cart.cart);
+  const { height, width } = useWindowDimensions();
+  console.log(open);
+  const toggleMenu = () => {
+    // setToggle(!toggle);
+    setOpen(!open);
+  };
+  
   return (
     <div className="header" id="header">
       <div className="container">
-        <FontAwesomeIcon className="toggle-menu" icon={faBars} />
+        <FontAwesomeIcon ref={ref} className="toggle-menu" onClick={toggleMenu} icon={open? faXmark : faBars} />
         <div className="logo">
           <NavLink to="/">
             <img src={logo} alt="" />
           </NavLink>
           <h2>Candleaf</h2>
         </div>
-        <div className="navlinks">
+        <div ref={ref} className="navlinks" style={{opacity: width <= 767 ? open === true ? 1 : 0 : 1}}>
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink to="/products">
                 Discovery <FontAwesomeIcon icon={faChevronDown} />
               </NavLink>
             </li>
@@ -48,6 +59,6 @@ const MainNavigation = () => {
       </div>
     </div>
   );
-};
+});
 
-export default MainNavigation;
+export default withClickOutside(MainNavigation);

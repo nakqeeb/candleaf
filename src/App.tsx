@@ -8,11 +8,12 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
-import HomePage from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Footer from "./shared/components/Footer/Footer";
-import ProductInfo from "./pages/ProductInfo";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
+import ProductInfoPage from "./pages/ProductInfoPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import ProductsPage from "./pages/ProductsPage";
 
 function App() {
   const location = useLocation();
@@ -25,8 +26,9 @@ function App() {
   let routes = (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/product/:productId" element={<ProductInfo />} />
-      <Route path="/cart" element={<Cart />} />
+      <Route path="/products" element={<ProductsPage />} />
+      <Route path="/product/:productId" element={<ProductInfoPage />} />
+      <Route path="/cart" element={<CartPage />} />
       {/* <Route path="/" element={<Users />} />
       <Route path="/:userId/places" element={<UserPlaces />} />
       <Route path="/places/new" element={<NewPlace />} />
@@ -36,7 +38,7 @@ function App() {
   );
   let checkoutRoute = (
     <Routes>
-      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
     </Routes>
   );
   return (

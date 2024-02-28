@@ -1,7 +1,7 @@
 import CartContent from "../components/CartContent/CartContent";
 
-const Cart = () => {
+const CartPage = () => {
     return <CartContent />
 };
 
-export default Cart;
+export default CartPage;

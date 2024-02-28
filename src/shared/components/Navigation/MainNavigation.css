@@ -59,8 +59,24 @@
   color: var(--black-color);
 }
 @media (max-width: 767px) {
+  .header .container .navlinks ul {
+    display: block;
+  }
   .header .container .navlinks {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -175px;
+    background-color: var(--white-color-alt);
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    transition: var(--main-transition) linear;
+  }
+  .header .container .navlinks ul li {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
   }
 }
 .header .container .icons svg {

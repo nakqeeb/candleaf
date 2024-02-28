@@ -2,7 +2,7 @@ import "./CheckoutCostInfo.css";
 import candle_1 from "../../assets/images/candle-1.png";
 import CustomButton from "../../shared/components/UIElements/CustomButton";
 import CustomInput from "../../shared/components/UIElements/CustomInput";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../shared/store";
 import CartProduct from "../../shared/store/CartProduct";
@@ -21,6 +21,8 @@ const CheckoutCostInfo: FC<{ step: number; paymentConfiremd: boolean }> = ({
   step,
   paymentConfiremd,
 }) => {
+  const [coupon, setCoupon] = useState<string>("");
+  const [couponValue, setCouponValue] = useState<string>("");
   const cartItems = useSelector((state: RootState) => state.cart.cart);
   const cartItem = useSelector((state: RootState) => state.cart.cart);
   const quantity = getTotal(cartItem).totalQuantity;
@@ -46,11 +48,13 @@ const CheckoutCostInfo: FC<{ step: number; paymentConfiremd: boolean }> = ({
       ))}
       {paymentConfiremd === false && (
         <div className="discount">
-          <CustomInput className="coupon-input" placeholder="Coupon code" />
+          <CustomInput onChange={(e: any) => setCouponValue(e.target.value)} className="coupon-input" placeholder="Coupon code" />
           <CustomButton
             className="addcode-btn"
             name="Add code"
-            style={{ backgroundColor: "#A8A8A8", fontSize: "17.65px" }}
+            disabled={couponValue === ""}
+            style={{ backgroundColor: couponValue === "" && "#A8A8A8", fontSize: "17.65px" }}
+            onClick={() => setCoupon(couponValue)}
           />
         </div>
       )}
@@ -76,10 +80,11 @@ const CheckoutCostInfo: FC<{ step: number; paymentConfiremd: boolean }> = ({
       <div className="total">
         <p>Total</p>
         <p>
+          {/* price - (price * 0.15) is equavlent to (price - 15%) */}
           {new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
-          }).format(price)}
+          }).format(coupon === "discount" || coupon === "DISCOUNT" ? price - (price * 0.15) : price)} 
         </p>
       </div>
     </>

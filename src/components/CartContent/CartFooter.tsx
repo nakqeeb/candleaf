@@ -46,6 +46,8 @@ const CartFooter = () => {
         className="cart-footer-btn"
         name="Check-out"
         onClick={() => navigate("/checkout")}
+        disabled={cartItems.length === 0 && true}
+        style={{backgroundColor: cartItems.length === 0 && "#A8A8A8" }}
       />
     </div>
   );
