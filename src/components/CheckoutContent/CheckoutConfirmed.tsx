@@ -21,7 +21,7 @@ const CheckoutConfirmed = () => {
       <CustomButton
         className="back-to-shopping-btn"
         name="Back to shopping"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/ecommerce-frontend")}
       />
       <CustomLink className={"print-receipt"} name="Print receipt" />
     </div>

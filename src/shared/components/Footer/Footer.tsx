@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container">
           <div className="logo-side">
             <div className="logo">
-              <NavLink to="/">
+              <NavLink to="/ecommerce-frontend">
                 <img src={logo} alt="" />
               </NavLink>
               <h2>Candleaf</h2>
@@ -20,54 +20,54 @@ const Footer = () => {
             <div className="discovery">
               <ul>
                 <li>
-                  <NavLink className="green-link" to={"/"}>
+                  <NavLink className="green-link" to={"/ecommerce-frontend"}>
                     Discovery
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>New season</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>New season</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Most searched</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Most searched</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Most selled</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Most selled</NavLink>
                 </li>
               </ul>
             </div>
             <div className="about">
               <ul>
                 <li>
-                  <NavLink className="green-link" to={"/"}>
+                  <NavLink className="green-link" to={"/ecommerce-frontend"}>
                     About
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Help</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Help</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Shipping</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Shipping</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Affiliate</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Affiliate</NavLink>
                 </li>
               </ul>
             </div>
             <div className="info">
               <ul>
                 <li>
-                  <NavLink className="green-link" to={"/"}>
+                  <NavLink className="green-link" to={"/ecommerce-frontend"}>
                     Info
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Contact us</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Contact us</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Privacy Policies</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Privacy Policies</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Terms & Conditions</NavLink>
+                  <NavLink to={"/ecommerce-frontend"}>Terms & Conditions</NavLink>
                 </li>
               </ul>
             </div>
