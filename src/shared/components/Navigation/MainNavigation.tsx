@@ -31,7 +31,7 @@ const MainNavigation = forwardRef(({ open, setOpen }: any, ref: any) => {
           <FontAwesomeIcon className="toggle-menu" onClick={toggleMenu} icon={open ? faXmark : faBars} />
         </div>
         <div className="logo">
-          <NavLink to="/ecommerce-frontend">
+          <NavLink to="/candleaf">
             <img src={logo} alt="" />
           </NavLink>
           <h2>Candleaf</h2>
@@ -44,10 +44,10 @@ const MainNavigation = forwardRef(({ open, setOpen }: any, ref: any) => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/ecommerce-frontend">About</NavLink>
+              <NavLink to="/candleaf">About</NavLink>
             </li>
             <li>
-              <NavLink to="/ecommerce-frontend">Contact us</NavLink>
+              <NavLink to="/candleaf">Contact us</NavLink>
             </li>
           </ul>
         </div>

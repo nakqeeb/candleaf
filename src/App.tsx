@@ -25,7 +25,7 @@ function App() {
   */
   let routes = (
     <Routes>
-      <Route path="/ecommerce-frontend/" element={<HomePage />} />
+      <Route path="/candleaf/" element={<HomePage />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/product/:productId" element={<ProductInfoPage />} />
       <Route path="/cart" element={<CartPage />} />

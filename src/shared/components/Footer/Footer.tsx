@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container">
           <div className="logo-side">
             <div className="logo">
-              <NavLink to="/ecommerce-frontend">
+              <NavLink to="/candleaf">
                 <img src={logo} alt="" />
               </NavLink>
               <h2>Candleaf</h2>
@@ -20,54 +20,54 @@ const Footer = () => {
             <div className="discovery">
               <ul>
                 <li>
-                  <NavLink className="green-link" to={"/ecommerce-frontend"}>
+                  <NavLink className="green-link" to={"/candleaf"}>
                     Discovery
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>New season</NavLink>
+                  <NavLink to={"/candleaf"}>New season</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Most searched</NavLink>
+                  <NavLink to={"/candleaf"}>Most searched</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Most selled</NavLink>
+                  <NavLink to={"/candleaf"}>Most selled</NavLink>
                 </li>
               </ul>
             </div>
             <div className="about">
               <ul>
                 <li>
-                  <NavLink className="green-link" to={"/ecommerce-frontend"}>
+                  <NavLink className="green-link" to={"/candleaf"}>
                     About
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Help</NavLink>
+                  <NavLink to={"/candleaf"}>Help</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Shipping</NavLink>
+                  <NavLink to={"/candleaf"}>Shipping</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Affiliate</NavLink>
+                  <NavLink to={"/candleaf"}>Affiliate</NavLink>
                 </li>
               </ul>
             </div>
             <div className="info">
               <ul>
                 <li>
-                  <NavLink className="green-link" to={"/ecommerce-frontend"}>
+                  <NavLink className="green-link" to={"/candleaf"}>
                     Info
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Contact us</NavLink>
+                  <NavLink to={"/candleaf"}>Contact us</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Privacy Policies</NavLink>
+                  <NavLink to={"/candleaf"}>Privacy Policies</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/ecommerce-frontend"}>Terms & Conditions</NavLink>
+                  <NavLink to={"/candleaf"}>Terms & Conditions</NavLink>
                 </li>
               </ul>
             </div>
