@@ -61,11 +61,10 @@ Frontend Application with ReactJS, Redux Toolkit, and Vanilla CSS This f
  
 ## Key features:
 
-ReactJS: Utilized for building user interfaces with efficient component­based architecture.
-Redux Toolkit: Leverages Redux Toolkit, a modern
-wrapper around Redux, for managing application state in a more efficient and streamlined manner.
-Pure CSS styling: No external styling libraries are used, relying on Vanilla CSS for complete control over the visual style.
-Figma inspiration: Design inspiration drawn from Figma, indicating strong design sensibilities and the ability to translate mockups into functional code.
+**ReactJS:** Utilized for building user interfaces with efficient component­based architecture.
+**Redux Toolkit:** Leverages Redux Toolkit, a modern wrapper around Redux, for managing application state in a more efficient and streamlined manner.
+**Pure CSS styling:** No external styling libraries are used, relying on Vanilla CSS for complete control over the visual style.
+**Figma inspiration:** Design inspiration drawn from Figma, indicating strong design sensibilities and the ability to translate mockups into functional code.
 
 ## This application demonstrates expertise in:
 
